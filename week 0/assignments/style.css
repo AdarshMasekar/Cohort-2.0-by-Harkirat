@@ -1,0 +1,114 @@
+/* Reset Styles: Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Typography: Sets font styles for the document */
+  body {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    font-size: 16px; /* Default text size */
+    line-height: 1.5; /* Improves readability */
+    color: #333; /* Default text color */
+    background-color: #f9f9f9; /* Background color */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+
+  /* Headings: Defines consistent heading styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* Bold font for headings */
+    color: #222; /* Slightly darker color for emphasis */
+    margin-bottom: 0.5em; /* Adds spacing below headings */
+  }
+
+  /* Links: Ensures a consistent appearance for hyperlinks */
+  a {
+    text-decoration: none; /* Removes underlines by default */
+    color: #007bff; /* Default link color */
+  }
+  a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color: #0056b3; /* Darker color on hover */
+  }
+
+  /* Buttons: Common button styles */
+  button {
+    display: inline-block; /* Allows padding and width control */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 16px; /* Text size */
+    border: none; /* Removes default borders */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Background color */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+
+  /* Containers: Centralizes layout */
+  .container {
+    width: 90%; /* Adjusts to viewport width */
+    max-width: 1200px; /* Limits the maximum width */
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds spacing inside the container */
+  }
+
+  /* Flexbox Utilities: For flexible layouts */
+  .flex {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 10px; /* Spacing between flex items */
+  }
+
+  /* Grid Utilities: For grid layouts */
+  .grid {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between grid items */
+  }
+
+  /* Images: Ensures responsive images */
+  img {
+    max-width: 100%; /* Prevents overflow */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+
+  /* Forms: General form styling */
+  input, textarea, select {
+    width: 100%; /* Full-width inputs */
+    padding: 10px; /* Adds spacing inside inputs */
+    margin-bottom: 1em; /* Spacing between fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: #007bff; /* Highlighted border on focus */
+    outline: none; /* Removes default outline */
+  }
+
+  /* Shadows and Transitions */
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  }
+
+  /* Dark Mode (Example) */
+  body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+  }
+  body.dark-mode a {
+    color: #bb86fc; /* Purple links */
+  }
+  body.dark-mode button {
+    background-color: #bb86fc; /* Purple buttons */
+    color: #121212; /* Dark text */
+  }
