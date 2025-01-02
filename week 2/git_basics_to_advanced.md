@@ -310,6 +310,88 @@ Incoming branch changes
 - 🎯 Keep branches focused and short-lived
 - 📝 Communicate changes with team members
 
+### Git Conflict Resolution Commands 🛠️
+
+When facing merge conflicts, these commands can help:
+
+```bash
+# View the commit history of conflicting files
+git log --merge
+
+# Show the differences between conflicting versions
+git diff
+
+# Checkout specific files or versions
+git checkout [branch/commit] [file]
+
+# Reset to a specific state, keeping changes unstaged
+git reset --mixed [commit]
+
+# Abort the current merge and return to pre-merge state
+git merge --abort
+
+# Reset current HEAD to specified state
+git reset [--soft | --mixed | --hard] [commit]
+```
+
+#### When to Use Each Command:
+
+| Command | Purpose | Common Use Case |
+|---------|----------|----------------|
+| `git log --merge` | Shows commits causing conflict | Understanding conflict history |
+| `git diff` | Displays differences in conflicting files | Reviewing specific changes |
+| `git checkout` | Retrieves specific versions | Getting clean copy of file |
+| `git reset --mixed` | Undoes changes, preserves working directory | Safe conflict resolution |
+| `git merge --abort` | Emergency exit from merge | Starting over when stuck |
+| `git reset` | Complete undo of changes | Last resort option |
+
+#### Conflict Resolution Workflow:
+
+1. 🔍 **Identify the Conflict**
+   - Run `git status` to see conflicting files
+   - Use `git log --merge` to understand the history
+
+2. 👀 **Review the Changes**
+   - Use `git diff` to see exact conflicts
+   - Understand both versions of the code
+
+3. ✏️ **Resolve the Conflict**
+   Choose one of these approaches:
+   - Manually edit conflicting files
+   - Use `git checkout --ours` or `git checkout --theirs`
+   - Use `git merge --abort` to start over
+
+4. 💾 **Complete the Resolution**
+   ```bash
+   git add .
+   git commit -m "Resolved merge conflict between feature and main"
+   ```
+
+### Pro Tips for Branch Management 🌟
+
+1. **Branch Naming Conventions**
+   ```
+   feature/user-authentication
+   bugfix/login-error
+   hotfix/security-patch
+   ```
+
+2. **Regular Branch Maintenance**
+   ```bash
+   # Delete local branch
+   git branch -d feature-name
+
+   # Delete remote branch
+   git push origin --delete feature-name
+   ```
+
+3. **Keep Branches Updated**
+   ```bash
+   # Update your feature branch with main
+   git checkout feature
+   git rebase main
+   ```
+
 Happy Coding! 🚀
 
 
@@ -324,3 +406,12 @@ git checkout feature
 git diff feature
 git push -u origin feature # -u stands for upstream
 git merge feature
+
+
+git commands to resolve conflicts
+git log --merge
+git diff
+git checkout
+git reset --mixed
+git merge --abort
+git reset
