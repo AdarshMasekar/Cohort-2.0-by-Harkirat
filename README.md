@@ -15,11 +15,11 @@ This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 co
 - Part 2: Working with APIs
 - Part 3: Deep Dive into JS Fundamentals
 
-### Week 2: Advanced JavaScript, Node, Express, Git 
+### Week 2: Advanced JavaScript, Node, Express, Git ✅
 - Part 1: Advanced Concepts in JavaScript
 - Part 2: Introduction to Node.js and Express
 
-### Week 3: Databases, JWT, Authentication
+### Week 3: Databases, JWT, Authentication ✅
 - Basics of Databases
 - Implementing JWT Authentication
 
