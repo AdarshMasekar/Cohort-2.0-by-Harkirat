@@ -15,6 +15,7 @@ const limiter = rateLimit({
     max: 10, // Limit each IP to 10 requests per windowMs
     message: { msg: "Too many requests, please try again later." }
 });
+
 app.use(limiter); // Applying the rate limit middleware
 
 // Connecting to MongoDB
@@ -80,6 +81,12 @@ app.get("/", userMiddleware, (req, res) => {
     console.log("Welcome to home page!"); // Logging access to home page
     res.status(200).json({ 'msg': "Authenticated user logged in!" }); // Success response for authenticated user
 });
+
+
+// global catches
+app.use(function(err,req,res,next){
+    res.json({msg:"something went wrong with the server!"})
+})
 
 // Starting the server
 app.listen(port, (req, res) => {
