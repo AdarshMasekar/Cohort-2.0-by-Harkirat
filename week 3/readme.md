@@ -43,6 +43,8 @@ Week 3 focuses on backend development fundamentals, middleware implementation, a
 - Custom middleware creation
 - Error handling strategies
 - Request-response pipeline
+- Zod input validations
+- Introduction to Authentication
 
 ### 3.2 Authentication System
 - Express.js integration

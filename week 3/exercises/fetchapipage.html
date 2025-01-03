@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api demo</title>
+</head>
+
+<body>
+    <script>
+        async function getData() {
+            try {
+                const response = await fetch("https://fakerapi.it/api/v1/persons");
+                const finalData = await response.json();
+                // Format the data into a string for innerHTML
+                let contentdiv = document.getElementById("content");
+                contentdiv.innerHTML = finalData.data.map(person => `<p>${person.firstname} ${person.lastname}</p>`).join('');
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+    </script>
+    <h2>user details</h2>
+    <div id="content"></div>
+    <button id="sas" onclick="getData()">get data</button>
+</body>
+
+</html>
