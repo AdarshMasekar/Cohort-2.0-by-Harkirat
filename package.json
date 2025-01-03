@@ -1,0 +1,19 @@
+{
+  "name": "cohort-2.0-by-harkirat",
+  "version": "1.0.0",
+  "description": "This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 course. Over the span of 20+ weeks, I explored various foundational and advanced topics related to web development, backend technologies, databases, DevOps, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.3",
+    "zod": "^3.24.1"
+  }
+}
