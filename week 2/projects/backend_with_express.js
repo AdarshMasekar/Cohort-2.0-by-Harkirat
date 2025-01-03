@@ -6,7 +6,12 @@ const port = 3000;
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://<username>:<password>@cluster0.eowltwt.mongodb.net/BookStore")
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.eowltwt.mongodb.net/BookStore").then(()=>{
+    console.log("database connected successfully");
+}).catch(err =>{
+    console.log("database connection error: ",err)
+})
+
 
 const BookSchema = new mongoose.Schema({
     title: String,

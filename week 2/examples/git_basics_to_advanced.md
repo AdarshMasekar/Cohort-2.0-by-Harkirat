@@ -152,6 +152,7 @@ Use code with caution.
 Bash
 Best Practices 🌟
 Commit Messages
+```
 
 ✍️ Write clear and concise commit messages.
 
@@ -192,8 +193,7 @@ main/master
             o---o---o  feature-a (Developing a new feature)
              \       /
               o-----o    (Merged back to main/master)
-content_copy
-download
+
 Use code with caution.
 
 Create a feature branch from main.
@@ -214,8 +214,7 @@ main:      o---o---o-------o  (Releases)
    feature-b:  o-------o---o
               \
    hotfix:      o---o         (Urgent fixes branched from main)
-content_copy
-download
+
 Use code with caution.
 
 Main branch: Contains the official release history.
@@ -237,8 +236,7 @@ Origin Repository             Your Fork
             |                               o---o---o (Your changes)
             |                                    /
             ---------------------Pull Request-----
-content_copy
-download
+
 Use code with caution.
 
 Fork the original repository.
