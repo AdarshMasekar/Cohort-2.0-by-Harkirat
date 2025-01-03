@@ -10,7 +10,7 @@ app.use(express.json());
 const port = 3000;
 
 // Database connection
-mongoose.connect("mongodb+srv://adarsh:Krishna55555@cluster0.eowltwt.mongodb.net/RoleBasedAccess")
+mongoose.connect("mongodb+srv://adarsh:<your password>@cluster0.eowltwt.mongodb.net/RoleBasedAccess")
   .then(() => {
     console.log("database connection successfull!");
   })
