@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo application</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center items horizontally */
+        }
+
+        #alltodos {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+            /* Limit width of the todo list */
+            max-width: 600px;
+            /* Set a maximum width */
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Added a border for visual separation */
+            border: 1px solid #ddd;
+            padding: 10px;
+            /* Added a small margin to the left and right */
+            margin: 0 10px;
+        }
+
+        /* Added styling for the button */
+        .todo-item button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Added hover effect for the button */
+        .todo-item button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style the input */
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Style the add button */
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="todoContent">
+    <button onclick="addTodo()">add to do</button>
+    <div id="alltodos"></div>
+    <script>
+        function addTodo() {
+            // Get the input element where the user types the todo content
+            let todoInput = document.getElementById("todoContent");
+            // Get the value of the input element
+            let todoContent = todoInput.value;
+            // Create a new div element to hold the todo content and button
+            let todoItemDiv = document.createElement('div');
+            todoItemDiv.classList.add('todo-item');
+            // Create a new paragraph element to hold the todo content
+            let todoElement = document.createElement('p');
+            // Set the text content of the paragraph to the user's input
+            todoElement.innerText = todoContent;
+            // Create a new button element to mark the todo as complete
+            let markCompleteButton = document.createElement('button');
+            // Set the text content of the button
+            markCompleteButton.innerText = "mark as complete";
+            // Add an onclick function to the button to change the text to "completed"
+            markCompleteButton.onclick = function () {
+                markCompleteButton.innerText = "completed";
+            }
+            // Get the div element where all todos are displayed
+            let allTodosDiv = document.getElementById("alltodos");
+            // Add the todo paragraph to the div
+            todoItemDiv.appendChild(todoElement);
+            // Add the mark complete button to the div
+            todoItemDiv.appendChild(markCompleteButton);
+            // Add the todo item div to the all todos div
+            allTodosDiv.appendChild(todoItemDiv);
+        }
+    </script>
+</body>
+
+</html>
