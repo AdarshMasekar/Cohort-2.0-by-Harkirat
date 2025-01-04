@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Example</title>
+</head>
+
+<body>
+    <!-- Form for user login -->
+    <form id="loginForm" action="/login">
+        <label for="firstname">first name:</label>
+        <input type="text" id="firstname" name="firstname" value="adarsh">
+
+        <label for="lasname">last name:</label>
+        <input type="text" id="lasname" name="lasname" value="masekar">
+    </form>
+
+    <!-- Button to trigger the renderData function -->
+    <button onclick="renderData()">try it</button>
+
+    <!-- Paragraph to display the result -->
+    <p id="displayplace"></p>
+
+    <script>
+        // Function to render data from the form
+        function renderData() {
+            // Get the form element
+            let form = document.getElementById("loginForm");
+
+            // Get the number of elements in the form
+            let len = form.elements.length;
+            console.log(form.elements[0].value); // Log the value of the first element
+
+            // Update the content of the paragraph with the number of elements
+            document.getElementById("displayplace").innerHTML = "found " + len + " elements inside the form!";
+        }
+    </script>
+</body>
+
+</html>
