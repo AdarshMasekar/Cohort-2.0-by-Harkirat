@@ -83,7 +83,7 @@
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const data = await response.json();
+                const data = await response.text();
                 result.innerText = data.sum; // Access the 'sum' property
             } catch (error) {
                 result.innerText = "Error: " + error.message;
