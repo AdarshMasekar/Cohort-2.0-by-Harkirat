@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            /* Sets a font for the body */
+        }
+
+        .container {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #ccc;
+            border: 1px solid gainsboro;
+            margin: 20px auto;
+            /* Added margin for better spacing */
+            padding: 20px;
+            /* Added padding for better spacing */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            /* Changed to 100% for better responsiveness */
+            box-sizing: border-box;
+            /* Include padding and border in width */
+        }
+
+        select {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            /* Changed to 100% for better responsiveness */
+            margin-top: 10px;
+            /* Added margin for better spacing */
+        }
+
+        #result {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            /* Center the result text */
+            font-weight: bold;
+            /* Make the result text bold */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Calculator App</h4>
+        <input type="text" placeholder="Enter the first number" id="first">
+        <input type="text" placeholder="Enter the second number" id="second">
+        <select name="operator" id="operator">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+        <button onclick="calculateSum()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateSum() {
+            let a = document.getElementById("first").value;
+            let b = document.getElementById("second").value;
+            let operator = document.getElementById("operator").value;
+            // Check if the inputs are valid numbers
+            if (isNaN(parseFloat(a)) || isNaN(parseFloat(b))) {
+                document.getElementById("result").textContent = "Please enter valid numbers.";
+                return; // Exit the function if invalid input
+            }
+            let result;
+            if (operator == "+") {
+                result = parseFloat(a) + parseFloat(b);
+            } else if (operator == "-") {
+                result = parseFloat(a) - parseFloat(b);
+            } else if (operator == "*") {
+                result = parseFloat(a) * parseFloat(b);
+            } else if (operator == "/") {
+                if (parseFloat(b) === 0) {
+                    document.getElementById("result").textContent = "Cannot divide by zero.";
+                    return;
+                }
+                result = parseFloat(a) / parseFloat(b);
+            }
+
+            document.getElementById("result").textContent = "Result: " + result; // Improved output
+        }
+    </script>
+</body>
+
+</html>
