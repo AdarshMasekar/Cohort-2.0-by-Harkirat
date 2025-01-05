@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://adarsh:Asadasad55@cluster0.eowltwt.mongodb.net/coursesellingapp')
+mongoose.connect('mongodb+srv://adarsh:<your password>@cluster0.eowltwt.mongodb.net/coursesellingapp')
 .then(()=>{
     console.log('connetion to db is successfull');
 }).catch((err)=>{
