@@ -23,7 +23,7 @@ This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 co
 - Basics of Databases
 - Implementing JWT Authentication
 
-### Week 4: DOM, React, MongoDB
+### Week 4: DOM, React, MongoDB ✅
 - Part 1: React Basics and DOM Manipulation
 - Part 2: Introduction to MongoDB
 
@@ -135,4 +135,3 @@ This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 co
 ### Week 35: Ad-Hoc Coding and Farewell
 - Practice Ad-Hoc Coding Problems
 - Wrapping Up the Cohort
-
