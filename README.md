@@ -27,7 +27,7 @@ This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 co
 - Part 1: React Basics and DOM Manipulation
 - Part 2: Introduction to MongoDB
 
-### Week 5: React Deep Dive and React Project
+### Week 5: React Deep Dive and React Project ✅
 - Advanced React Concepts
 - Building React Projects
 
