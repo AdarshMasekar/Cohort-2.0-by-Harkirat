@@ -31,10 +31,10 @@ This repository contains my week-by-week learnings from Harkirat's Cohort 2.0 co
 - Advanced React Concepts
 - Building React Projects
 
-### Week 6: Advanced React Concepts
+### Week 6: Advanced React Concepts ✅
 - Diving deeper into React Ecosystem
 
-### Week 7: Router, Recoil, State Management
+### Week 7: Router, Recoil, State Management ✅
 - React Router
 - State Management using Recoil
 
